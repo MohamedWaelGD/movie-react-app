@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+@theme {
+    --color-dark: #181a1c;
+    --color-dark-light: #1d1e22;
+    --font-display: "Poppins", sans-serif;
+}
+
+body { @apply font-display; }
+
+a, button {
+    cursor: pointer;
+}
+
+.btn-primary { @apply flex items-center justify-center gap-2 rounded-lg bg-white/20 p-2 py-2 text-lg font-bold text-white transition hover:bg-white/50; }
