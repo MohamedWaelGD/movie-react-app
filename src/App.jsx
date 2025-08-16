@@ -11,10 +11,13 @@ import Navbar from "./components/Navbar.jsx";
 import Wishlist from "./pages/Wishlist/Wishlist.jsx";
 import { WishlistProvider } from "./contexts/WishListContext.jsx";
 import Search from "./pages/Search/Search.jsx";
+import PageLoader from "./components/PageLoader.jsx";
+import React from "react";
 
 function App() {
   return (
     <>
+      <PageLoader isLoading={false} />
       <WishlistProvider>
         <Router>
           <Navbar />

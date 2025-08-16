@@ -1,15 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [search, setSearch] = useState("");
+  const navRef = useRef(null);
 
   const searchQuery = (e) => {
     if (e.key === "Enter" && search) {
       window.location.href = `/search?query=${search}`;
     }
   };
+
+  useEffect(() => {
+    gsap.from(navRef.current, {
+      y: -100,
+      opacity: 0,
+      ease: "power2.out",
+      duration: 1,
+    });
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +38,7 @@ const Navbar = () => {
 
   return (
     <nav
+      ref={navRef}
       className={`fixed top-0 right-0 left-0 z-50 transition-colors duration-300 ${
         scrolled ? "bg-dark shadow-md" : "bg-transparent"
       }`}

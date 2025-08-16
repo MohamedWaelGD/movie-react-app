@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import HeroSection from "./Components/HeroSection/HeroSection.jsx";
 import MoviesSection from "./Components/MoviesSection/MoviesSection.jsx";
 import {
@@ -7,6 +7,7 @@ import {
   getTrendingMovies,
 } from "../../services/movieService.js";
 import Loading from "../../components/Loading.jsx";
+import PageLoader from "../../components/PageLoader.jsx";
 
 const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
