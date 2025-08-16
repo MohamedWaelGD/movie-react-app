@@ -9,7 +9,7 @@ const Actor = ({ actor }) => {
         src={actorImage}
         alt={actor.name}
         className={"h-[150px] w-[150px] rounded-full object-cover"}
-        onError={() => setActorImage("/src/assets/placeholder.png")}
+        onError={() => setActorImage("/placeholder.png")}
       />
       <p className={"text-center"}>{actor.name}</p>
     </div>

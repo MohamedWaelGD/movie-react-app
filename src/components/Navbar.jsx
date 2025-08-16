@@ -83,7 +83,7 @@ const Navbar = () => {
               }
             >
               <img
-                src={"/src/assets/placeholder.png"}
+                src={"/placeholder.png"}
                 alt={"profile"}
                 className={"h-full w-full object-cover"}
               />
